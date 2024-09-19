@@ -1,0 +1,1 @@
+docker-compose down && docker-compose build --no-cache && docker-compose up -d && docker system prune --all --force --volumes && docker-compose ps && docker-compose logs -f

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    command: npm run start:dev
+    ports:
+      - "${PORT:-3000}:3000"
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./sqlite-data:/usr/src/app/sqlite-data
+
+volumes:
+  sqlite-data:
