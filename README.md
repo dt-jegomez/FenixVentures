@@ -23,8 +23,10 @@ cd FenixVentures
 1. Create a `.env` file in the root directory:
 
 ```
-DB_PATH=./src/database.sqlite
-JWT_SECRET=your_jwt_secret_here
+NODE_ENV=production
+PORT=3000
+JWT_SECRET=1234567890
+DB_PATH=/usr/src/app/sqlite-data/tasks.sqlite
 ```
 
 Replace `your_jwt_secret_here` with a secure secret key.
